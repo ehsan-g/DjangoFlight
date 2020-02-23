@@ -1,0 +1,24 @@
+{% extends "flights/base.html" %}
+
+{% block title %}
+    Flights
+{% endblock %}
+
+{% block body %}
+
+    <h1>Flights</h1>
+    <uL>
+        {% for flight in flights %}
+            <li>
+              <a href="{% url 'flight' flight.id %}">{{ flight }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        <li>Currently logged in as: {{ user.username }}</li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+    </ul>
+
+{% endblock %}
+    
