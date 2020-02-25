@@ -1,0 +1,5 @@
+FROM python:3
+WORKDIR /usr/src/app
+add requirements.txt usr/src/app
+run pip install-r requirements.txt
+ADD . /usr/src/app
